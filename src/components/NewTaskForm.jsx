@@ -11,14 +11,19 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 
-const NewTaskForm = () => {
+const NewTaskForm = ({allTasks, setAllTasks}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const { register, handleSubmit, reset } = useForm();
 
   const handleAddNewTask = (data) => {
-    
-    
+
+    const newTask = {
+        ...data,
+        isCompleted : false
+        
+    };
+    setAllTasks([...allTasks, newTask])
 
     onClose();
     reset();
