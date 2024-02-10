@@ -9,9 +9,15 @@ const getLocalStorageSaveTasks = () => {
 }
 
 const addToDB = (newTask) => {
-    let previousTask = getLocalStorageSaveTasks();
-    previousTask.push(newTask);
-    localStorage.setItem("allTasks", JSON.stringify(previousTask));
+    let previousTasks = getLocalStorageSaveTasks();
+    previousTasks.push(newTask);
+    localStorage.setItem("allTasks", JSON.stringify(previousTasks));
+};
+
+const deleteTaskFromDB = (title, description) => {
+    let previousTasks = getLocalStorageSaveTasks();
+    const tasksAfterRemove = previousTasks.filter(task => !(task.title === title && task.description === description));
+    localStorage.setItem("allTasks", JSON.stringify(tasksAfterRemove));
 }
 
-export { getLocalStorageSaveTasks, addToDB };
+export { getLocalStorageSaveTasks, addToDB, deleteTaskFromDB };

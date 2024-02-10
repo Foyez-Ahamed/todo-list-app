@@ -27,11 +27,11 @@ function App() {
      <NewTaskForm allTasks={allTasks} setAllTasks={setAllTasks}></NewTaskForm>
 
      <div className="bg-blue-300 mt-6 p-3 rounded-md">
-      <CompletedTasks completed={completed}></CompletedTasks>
+      <CompletedTasks completed={completed} allTasks={allTasks} setAllTasks={setAllTasks}></CompletedTasks>
      </div>
 
      <div className="bg-red-300 mt-6 p-3 rounded-md">
-      <NotCompletedTasks notCompleted={notCompleted}></NotCompletedTasks>
+      <NotCompletedTasks notCompleted={notCompleted} allTasks={allTasks} setAllTasks={setAllTasks}></NotCompletedTasks>
      </div>
     </div>
    
