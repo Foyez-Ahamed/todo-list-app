@@ -10,6 +10,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+import { addToDB } from "../localDB";
 
 const NewTaskForm = ({allTasks, setAllTasks}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,6 +25,7 @@ const NewTaskForm = ({allTasks, setAllTasks}) => {
         
     };
     setAllTasks([...allTasks, newTask])
+    addToDB(newTask);
 
     onClose();
     reset();
