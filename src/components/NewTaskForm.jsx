@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { addToDB } from "../localDB";
+import toast from "react-hot-toast";
 
 const NewTaskForm = ({allTasks, setAllTasks}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,6 +30,7 @@ const NewTaskForm = ({allTasks, setAllTasks}) => {
 
     onClose();
     reset();
+    toast.success("Task added successfully")
   };
 
   return (

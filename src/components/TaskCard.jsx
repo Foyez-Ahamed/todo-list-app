@@ -4,13 +4,13 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { deleteTaskFromDB } from "../localDB";
 import EditTaskModal from "./EditTaskModal";
 import { useDisclosure } from "@chakra-ui/react";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 const TaskCard = ({task, allTasks, setAllTasks}) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const {title, description, deadline, isCompleted, priority} = task;
-
-
 
     let priorityBg = "";
 
@@ -23,9 +23,23 @@ const TaskCard = ({task, allTasks, setAllTasks}) => {
     }
     
     const handleDelete = (tit, descrip) => {
-        const tasksAfterRemove = allTasks.filter(task => !(task.title === tit && task.description === descrip));
-        setAllTasks(tasksAfterRemove);
-        deleteTaskFromDB(tit, descrip);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Want to delete this task!",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                const tasksAfterRemove = allTasks.filter(task => !(task.title === tit && task.description === descrip));
+                setAllTasks(tasksAfterRemove);
+                deleteTaskFromDB(tit, descrip);  
+                toast.success("Task deleted Successfully")
+            }
+          });
     }
 
     return (
