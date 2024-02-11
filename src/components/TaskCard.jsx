@@ -44,13 +44,8 @@ const TaskCard = ({ task, allTasks, setAllTasks }) => {
   };
 
   const handleEdit = (data) => {
-    // const eiditedTask = allTasks.find(task => (task.id === id));
-    console.log(data);
-    console.log(data.isCompleted);
     const status = data.isCompleted === "completed" ? true : false;
     const dataWithId = { ...data, id, isCompleted: status };
-    console.log(dataWithId);
-
     let editedTaskPosition = 0;
 
     for (let i = 0; i < allTasks.length; i++) {
@@ -58,12 +53,9 @@ const TaskCard = ({ task, allTasks, setAllTasks }) => {
         editedTaskPosition = i;
       }
     }
-    console.log(editedTaskPosition, "edited position");
     let newAllTasks = [...allTasks];
     newAllTasks[editedTaskPosition] = dataWithId;
-    console.log(newAllTasks, "varrible");
     setAllTasks(newAllTasks);
-    console.log(allTasks, "state value");
     editTaskFromDB(id, dataWithId);
     onClose();
   };

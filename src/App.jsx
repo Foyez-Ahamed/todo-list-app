@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-2 md:px-6 lg:px-8 lg:py-2 font-roboto">
-      <h1 className="text-4xl text-center font-bold mt-10">
+      <h1 className=" text-3xl lg:text-4xl text-center font-bold mt-10">
         Todo <span className="text-[#E76F51]">List</span>
       </h1>
 

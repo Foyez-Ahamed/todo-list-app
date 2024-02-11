@@ -10,6 +10,7 @@ import {
 import { useForm } from "react-hook-form";
 import { addToDB } from "../localDB";
 import toast from "react-hot-toast";
+import { FaPlus } from "react-icons/fa";
 
 const NewTaskForm = ({ allTasks, setAllTasks }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -35,12 +36,12 @@ const NewTaskForm = ({ allTasks, setAllTasks }) => {
       <>
         <div className="ml-3 mt-6 flex items-center gap-6">
           <button
-            className=" text-medium lg:text-xl font-bold shadow-md px-4 py-2 rounded bg-[#E76F51] text-white hover:bg-gray-500 transition-all duration-300"
+            className=" text-medium font-bold shadow-md px-4 py-2 rounded bg-[#E76F51] text-white hover:bg-gray-500 transition-all duration-300 flex justify-center items-center gap-2"
             onClick={onOpen}
           >
-            Add New Task +
+            Add New Task <FaPlus />
           </button>
-          <h2 className="text-medium lg:text-xl font-bold shadow-md lg:px-4 py-2 rounded bg-gray-100">
+          <h2 className="text-medium font-bold shadow-md lg:px-4 py-2 rounded bg-gray-100">
             Total Task: {allTasks.length}
           </h2>
         </div>

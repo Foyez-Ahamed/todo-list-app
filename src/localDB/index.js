@@ -26,7 +26,7 @@ const getLocalStorageSaveTasks = () => {
         id: 2,
         title: "Task 3",
         description: "Review code changes",
-        priority: "low",
+        priority: "medium",
         isCompleted: false,
         deadline: "2024-02-18",
       },
@@ -53,7 +53,7 @@ const getLocalStorageSaveTasks = () => {
         title: "Task 5",
         description: "Attend team meeting",
         priority: "low",
-        isCompleted: false,
+        isCompleted: true,
         deadline: "2024-02-21",
       },
     ];
