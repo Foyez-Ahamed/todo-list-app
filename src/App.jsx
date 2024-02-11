@@ -7,9 +7,6 @@ import { getLocalStorageSaveTasks } from "./localDB";
 
 function App() {
 
-  
-  
-
   const [allTasks, setAllTasks] = useState([]);
 
   let completed = allTasks.filter(task => task.isCompleted === true)
