@@ -75,18 +75,18 @@ const TaskCard = ({task, allTasks, setAllTasks}) => {
     return (
        
         <div>
-             <div className="p-4 flex flex-col gap-2 bg-gray-200 shadow-lg rounded mt-6 relative">
+             <div className="p-4 flex flex-col gap-2 bg-gray-100 shadow-lg rounded mt-6 relative">
             <h3 className="font-semibold text-medium lg:text-xl capitalize">{title}</h3>
             <h4 className="text-medium font-bold">Status: <span style={{ color: isCompleted ? 'green' : 'inherit' }}>{isCompleted ? "completed" : "incomplete"}</span></h4>
             <p className={`capitalize absolute right-4 top-4 p-1 px-3 ${priorityBg} rounded text-white text-[16px] font-bold`}>{priority}</p>
-            <p className="capitalize">{description}</p>
-            <p >Deadline: {deadline}</p>
+            <p className="capitalize text-[16px]">{description}</p>
+            <p className="text-[16px]">Deadline: {deadline}</p>
             <div className="flex gap-4 items-center">
                <div>
-               <FaRegEdit onClick={handleOpenModal}/>
+               <FaRegEdit className="text-2xl text-[#073b4c]" onClick={handleOpenModal}/>
                </div>
                 <div>
-                <AiOutlineDelete onClick={handleDelete}/>
+                <AiOutlineDelete className="text-2xl text-[#E76F51]" onClick={handleDelete}/>
                 </div>
                 </div>
 

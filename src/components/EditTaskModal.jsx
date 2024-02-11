@@ -2,12 +2,9 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-    Button,
-    useDisclosure,
   } from "@chakra-ui/react";
   import { useForm } from "react-hook-form";
 
@@ -104,7 +101,7 @@ const EditTaskModal = ({isOpen, onOpen, onClose, title, description, deadline, i
               </ModalBody>
               <ModalFooter>
                 <button
-                  className="w-full py-2 font-medium text-xl text-white bg-[#A93159] rounded-md"
+                  className="w-full py-2 font-medium text-xl text-white bg-[#E76F51] rounded-md"
                   type="submit"
                 >
                   Save
