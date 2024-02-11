@@ -1,8 +1,32 @@
-# React + Vite
+# Todo List App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### [Live Link](https://extraordinary-horse-d99f79.netlify.app/)
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple Todo List application using React reactjs. The application allows users to manage their task where they can add, edit, and delete tasks. Each task has a status (completed or incomplete) and a priority (low/medium/high). The application provides basic functionality to manage tasks, including task display, addition, editing, completion, and deletion.
+
+## Features
+
+- Displayed a list of tasks with users respective status (completed tasks or Incomplete tasks).
+- Display a counter for total tasks, completed tasks and incomplete task.
+- User can add a new task.
+- User can edit an existing task.
+- User can delete a task.
+- Implemented local storage to persist tasks even if the user refreshes the page.
+- Implemented filtering system based on Priority where user can fiter and find out priority based tasks.
+- After added task by default it mark on incomplete tasks but when user edited and change status completed then it mark as completed tasks.
+
+[Note]: If unfortunately does not work any functionality please refresh the browser.
+
+## Usage
+
+1. Clone the repository:
+```bash
+   git clone https://github.com/Foyez-Ahamed/todo-list-app.git
+
+2. Install dependencies:
+npm install
+
+2. Run the application:
+npm run dev
