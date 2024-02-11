@@ -77,7 +77,7 @@ const TaskCard = ({task, allTasks, setAllTasks}) => {
         <div>
              <div className="p-4 flex flex-col gap-2 bg-gray-100 shadow-md relative">
             <h3 className="font-semibold text-2xl capitalize">{title}</h3>
-            <h4>Status: {isCompleted ? "completed" : "Not Completed"}</h4>
+            <h4>Status: {isCompleted ? "completed" : "incomplete"}</h4>
             <p className={`capitalize absolute right-4 top-4 p-1 ${priorityBg} rounded text-white text-[12px]`}>{priority}</p>
             <p className="capitalize">{description}</p>
             <p >Deadline: {deadline}</p>

@@ -83,8 +83,8 @@ const EditTaskModal = ({isOpen, onOpen, onClose, title, description, deadline, i
                     defaultValue={isCompleted ? "completed" : "notCompleted"}
                     {...register("isCompleted", { required: true })}
                   >
-                    <option value="notCompleted">Not Completed</option>
-                    <option value="completed">Completed</option>
+                    <option value="notCompleted">incomplete</option>
+                    <option value="completed">completed</option>
                   </select>
                 </div>
 

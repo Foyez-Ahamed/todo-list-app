@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TaskCard from "./TaskCard";
+import handleFilter from "../utility/priorityFilter";
 
-const CompletedTasks = ({ completed, allTasks, setAllTasks, x }) => {
- 
-   const [displayCompleted, setDisplayCompleted] = useState(completed) 
+const CompletedTasks = ({ completed, allTasks, setAllTasks }) => {
+ console.log(completed);
+   const [displayCompleted, setDisplayCompleted] = useState([]) 
 
-   const handleFilter = (e) => {
-      e.preventDefault();
-      console.log(e.target.value);
-    //   if(e.target.value === "high"){
-    //     const highValue = 
-    //   }
-   }
+   useEffect(()=> {
+    setDisplayCompleted(completed);
+   },[completed])
+
+   console.log(displayCompleted);
  
 
   return (
@@ -23,7 +22,7 @@ const CompletedTasks = ({ completed, allTasks, setAllTasks, x }) => {
           <label className="font-medium" htmlFor="Filter">
             Filter
           </label>
-          <select onChange={handleFilter} className="border border-gray-600 rounded-md p-3" id="Filter">
+          <select onChange={(e) => handleFilter(e,completed, setDisplayCompleted)} className="border border-gray-600 rounded-md p-3" id="Filter">
             <option value="all">All</option>
             <option value="high">High</option>
             <option value="medium">Medium</option>
