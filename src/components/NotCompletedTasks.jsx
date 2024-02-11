@@ -12,7 +12,7 @@ const NotCompletedTasks = ({ notCompleted, allTasks, setAllTasks }) => {
   return (
     <div>
       <div className="flex items-center gap-2 justify-between">
-        <h1 className=" text-medium lg:text-2xl font-medium">
+        <h1 className=" text-medium lg:text-2xl font-bold">
           Incomplete Tasks: {notCompleted.length}
         </h1>
 

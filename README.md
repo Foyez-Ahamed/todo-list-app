@@ -10,7 +10,7 @@ A simple Todo List application using React reactjs. The application allows users
 
 - Displayed a list of tasks with users respective status (completed tasks or Incomplete tasks).
 - Display a counter for total tasks, completed tasks and incomplete task.
-- User can add a new task.
+- By clicking add new task button a modal open and user can add a new task.
 - User can edit an existing task.
 - User can delete a task.
 - Implemented local storage to persist tasks even if the user refreshes the page.

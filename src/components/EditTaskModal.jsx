@@ -34,7 +34,7 @@ const EditTaskModal = ({
       <ModalContent>
         <form
           onSubmit={handleSubmit(handleEdit)}
-          className="flex flex-col gap-4 p-6 relative "
+          className="flex flex-col gap-4 py-3 relative "
         >
           <ModalCloseButton />
           <ModalBody>
@@ -111,7 +111,7 @@ const EditTaskModal = ({
           </ModalBody>
           <ModalFooter>
             <button
-              className="w-full py-2 font-medium text-xl text-white bg-[#E76F51] rounded-md"
+             className="w-full py-2 font-medium text-medium hover:bg-gray-400 text-white bg-[#E76F51] rounded-md"
               type="submit"
             >
               Save
