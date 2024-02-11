@@ -21,8 +21,11 @@ function App() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-2 md:px-6 lg:px-8 lg:py-2 font-roboto">
-     <h1 className="text-4xl text-center font-bold mt-10">Todo List {allTasks.length}</h1>
+     <h1 className="text-4xl text-center font-bold mt-10">Todo <span className="text-[#E76F51]">List</span></h1>
+
+     <div className="mt-6">
      <NewTaskForm allTasks={allTasks} setAllTasks={setAllTasks}></NewTaskForm>
+     </div>
 
      <div className="mt-6 p-3 rounded-md">
       <CompletedTasks completed={completed} allTasks={allTasks} setAllTasks={setAllTasks}></CompletedTasks>

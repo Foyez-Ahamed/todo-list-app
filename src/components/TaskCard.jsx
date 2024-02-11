@@ -15,11 +15,11 @@ const TaskCard = ({task, allTasks, setAllTasks}) => {
     let priorityBg = "";
 
     if(priority === "high"){
-        priorityBg = "bg-red-600"
+        priorityBg = "bg-[#963831]"
     } else if(priority === "medium"){
-        priorityBg = "bg-green-500"
+        priorityBg = "bg-[#073b4c]"
     } else{
-        priorityBg = "bg-blue-600"
+        priorityBg = "bg-[#4c1e4f]"
     }
     
     const handleDelete = () => {
@@ -75,10 +75,10 @@ const TaskCard = ({task, allTasks, setAllTasks}) => {
     return (
        
         <div>
-             <div className="p-4 flex flex-col gap-2 bg-gray-100 shadow-md relative">
-            <h3 className="font-semibold text-2xl capitalize">{title}</h3>
-            <h4>Status: {isCompleted ? "completed" : "incomplete"}</h4>
-            <p className={`capitalize absolute right-4 top-4 p-1 ${priorityBg} rounded text-white text-[12px]`}>{priority}</p>
+             <div className="p-4 flex flex-col gap-2 bg-gray-200 shadow-lg rounded mt-6 relative">
+            <h3 className="font-semibold text-medium lg:text-xl capitalize">{title}</h3>
+            <h4 className="text-medium font-bold">Status: <span style={{ color: isCompleted ? 'green' : 'inherit' }}>{isCompleted ? "completed" : "incomplete"}</span></h4>
+            <p className={`capitalize absolute right-4 top-4 p-1 px-3 ${priorityBg} rounded text-white text-[16px] font-bold`}>{priority}</p>
             <p className="capitalize">{description}</p>
             <p >Deadline: {deadline}</p>
             <div className="flex gap-4 items-center">

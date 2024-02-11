@@ -14,7 +14,7 @@ const NotCompletedTasks = ({ notCompleted, allTasks, setAllTasks }) => {
     <div>
 
       <div className="flex items-center gap-2 justify-between">
-        <h1 className="text-3xl font-medium">Not Completed Tasks</h1>
+        <h1 className=" text-medium lg:text-3xl font-medium">Incomplete Tasks: {notCompleted.length}</h1>
 
         <form className="flex items-center gap-3">
           <label className="font-medium" htmlFor="Filter">

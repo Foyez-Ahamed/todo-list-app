@@ -37,8 +37,9 @@ const NewTaskForm = ({allTasks, setAllTasks}) => {
   return (
     <div>
       <>
-        <div className="mt-6">
-        <Button onClick={onOpen}>Add New Task +</Button>
+        <div className="ml-3 mt-6 flex items-center gap-6">
+        <button className=" text-medium lg:text-xl font-bold shadow-md px-4 py-2 rounded bg-[#E76F51] text-white hover:bg-gray-500 transition-all duration-300" onClick={onOpen}>Add New Task +</button>
+        <h2 className="text-medium lg:text-xl font-bold shadow-md lg:px-4 py-2 rounded">Total Task: {allTasks.length}</h2>
         </div>
         <Modal
           onClose={onClose}

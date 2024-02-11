@@ -3,20 +3,17 @@ import TaskCard from "./TaskCard";
 import handleFilter from "../utility/priorityFilter";
 
 const CompletedTasks = ({ completed, allTasks, setAllTasks }) => {
- console.log(completed);
-   const [displayCompleted, setDisplayCompleted] = useState([]) 
+ 
+   const [displayCompleted, setDisplayCompleted] = useState([]);
 
    useEffect(()=> {
     setDisplayCompleted(completed);
-   },[completed])
-
-   console.log(displayCompleted);
- 
+   },[completed]) 
 
   return (
     <div>
       <div className="flex items-center gap-2 justify-between">
-        <h1 className="text-3xl font-medium">Completed Tasks</h1>
+        <h1 className="text-medium lg:text-3xl  font-medium">Completed Tasks: {completed.length}</h1>
 
         <form className="flex items-center gap-3">
           <label className="font-medium" htmlFor="Filter">
@@ -31,6 +28,7 @@ const CompletedTasks = ({ completed, allTasks, setAllTasks }) => {
         </form>
         
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {displayCompleted.map((task) => (
           <TaskCard
