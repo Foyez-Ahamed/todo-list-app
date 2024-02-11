@@ -17,7 +17,7 @@ A simple Todo List application using React reactjs. The application allows users
 - Implemented filtering system based on Priority where user can fiter and find out priority based tasks.
 - After added task by default it mark on incomplete tasks but when user edited and change status completed then it mark as completed tasks.
 
-[Note]: If unfortunately does not work any functionality please refresh the browser.
+[Note]: If unfortunately does not work any functionality please refresh the browser. Show some already added task for increase UI beauty otherwise UI look empty.
 
 ## Usage
 
