@@ -2,44 +2,47 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button,
   useDisclosure,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { addToDB } from "../localDB";
 import toast from "react-hot-toast";
 
-const NewTaskForm = ({allTasks, setAllTasks}) => {
+const NewTaskForm = ({ allTasks, setAllTasks }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const { register, handleSubmit, reset } = useForm();
 
   const handleAddNewTask = (data) => {
-
     const newTask = {
-        ...data,
-        isCompleted : false,
-        id : allTasks.length
-        
+      ...data,
+      isCompleted: false,
+      id: allTasks.length,
     };
-    setAllTasks([...allTasks, newTask])
+    setAllTasks([...allTasks, newTask]);
     addToDB(newTask);
 
     onClose();
     reset();
-    toast.success("Task added successfully")
+    toast.success("Task added successfully");
   };
 
   return (
     <div>
       <>
         <div className="ml-3 mt-6 flex items-center gap-6">
-        <button className=" text-medium lg:text-xl font-bold shadow-md px-4 py-2 rounded bg-[#E76F51] text-white hover:bg-gray-500 transition-all duration-300" onClick={onOpen}>Add New Task +</button>
-        <h2 className="text-medium lg:text-xl font-bold shadow-md lg:px-4 py-2 rounded bg-gray-100">Total Task: {allTasks.length}</h2>
+          <button
+            className=" text-medium lg:text-xl font-bold shadow-md px-4 py-2 rounded bg-[#E76F51] text-white hover:bg-gray-500 transition-all duration-300"
+            onClick={onOpen}
+          >
+            Add New Task +
+          </button>
+          <h2 className="text-medium lg:text-xl font-bold shadow-md lg:px-4 py-2 rounded bg-gray-100">
+            Total Task: {allTasks.length}
+          </h2>
         </div>
         <Modal
           onClose={onClose}
@@ -54,11 +57,6 @@ const NewTaskForm = ({allTasks, setAllTasks}) => {
               onSubmit={handleSubmit(handleAddNewTask)}
               className="flex flex-col gap-4 p-6 relative "
             >
-              <ModalHeader>
-                <h4 className="text-3xl  font-semibold">
-                  Please add your task
-                </h4>
-              </ModalHeader>
               <ModalCloseButton />
               <ModalBody>
                 <div className="flex flex-col gap-3">
