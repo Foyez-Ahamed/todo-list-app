@@ -4,7 +4,7 @@
 
 ## Description
 
-A simple Todo List application using React reactjs. The application allows users to manage their task where they can add, edit, and delete tasks. Each task has a status (completed or incomplete) and a priority (low/medium/high). The application provides basic functionality to manage tasks, including task display, addition, editing, completion, and deletion.
+A simple Todo List application using Reactjs. The application allows users to manage their task where they can add, edit, and delete tasks. Each task has a status (completed or incomplete) and a priority (low/medium/high). The application provides basic functionality to manage tasks, including task display, addition, editing, completion, and deletion.
 
 ## Features
 
