@@ -22,7 +22,8 @@ const NewTaskForm = ({allTasks, setAllTasks}) => {
 
     const newTask = {
         ...data,
-        isCompleted : false
+        isCompleted : false,
+        id : allTasks.length
         
     };
     setAllTasks([...allTasks, newTask])

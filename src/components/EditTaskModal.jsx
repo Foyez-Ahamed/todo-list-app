@@ -11,16 +11,9 @@ import {
   } from "@chakra-ui/react";
   import { useForm } from "react-hook-form";
 
-const EditTaskModal = ({isOpen, onOpen, onClose, title, description, deadline, isCompleted, priority, allTasks, setAllTasks}) => {
+const EditTaskModal = ({isOpen, onOpen, onClose, title, description, deadline, isCompleted, priority, handleEdit ,id}) => {
 
   const { register, handleSubmit, reset } = useForm();
-
-  const handleEdit = () => {
-    const eiditedTask = allTasks.find(task => !(task.title === title && task.description === description));
-    console.log(eiditedTask);
-    onClose();
-    reset();
-}
 
     return (
         <Modal
@@ -88,7 +81,7 @@ const EditTaskModal = ({isOpen, onOpen, onClose, title, description, deadline, i
                     className="border border-gray-600 rounded-md p-3"
                     id="status"
                     defaultValue={isCompleted ? "completed" : "notCompleted"}
-                    {...register("status", { required: true })}
+                    {...register("isCompleted", { required: true })}
                   >
                     <option value="notCompleted">Not Completed</option>
                     <option value="completed">Completed</option>
